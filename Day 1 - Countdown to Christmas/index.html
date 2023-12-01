@@ -8,7 +8,19 @@
     <title>Christmas Countdown 🎄</title>
   </head>
   <body>
-    <h1>Christmas Countdown 🎄</h1>
+    <div>
+      <h1>Choose The Date To Countdown:</h1>
+      <div class="input-fields">
+        <input type="text" id="input-header" />
+        <input type="date" id="input-date" />
+        <button id="submit-btn">Submit</button>
+      </div>
+    </div>
+    <div class="header">
+      <img src="./stopwatch.png" alt="" />
+      <h1 id="countdown-header">Christmas Countdown 🎄</h1>
+      <img src="./stopwatch.png" alt="" />
+    </div>
     <div class="container">
       <div class="container-countdown-display">
         <p id="countdown-display" class="countdown-display">-</p>
@@ -16,7 +28,7 @@
       </div>
       <span id="countdown-hours-display" class="hours"> - </span>
 
-      <p class="countdown-text">Days 'til Christmas!</p>
+      <p class="countdown-text">time left 'til this day!</p>
     </div>
     <script src="index.js"></script>
   </body>

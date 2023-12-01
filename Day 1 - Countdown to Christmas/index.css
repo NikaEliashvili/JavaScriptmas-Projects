@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-  --wine-red: #C7375F;
-  --bright-red: #D42D2F;
-  --dark-green: #344D2F;
-  --light-green: #77A047;
-  --gold: #FAC57D;
-  --snow: #F0F4F7;
+    --wine-red: #C7375F;
+    --bright-red: #D42D2F;
+    --dark-green: rgb(32, 41, 167);
+    --light-green: #77A047;
+    --gold: #FAC57D;
+    --snow: #F0F4F7;
 }
 
-html, body {
+html,
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -23,6 +27,17 @@ body {
     background-color: var(--snow);
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header img {
+    width: 30px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -32,11 +47,12 @@ body {
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
-.container-countdown-display{
+
+.container-countdown-display {
     position: relative;
 }
 
-.container-countdown-display .days{
+.container-countdown-display .days {
     position: absolute;
     bottom: 1.2rem;
     right: -1.2rem;
@@ -48,9 +64,51 @@ body {
 .countdown-display {
     font-size: 100px;
     margin: 0;
+    padding-inline: 1.5rem;
 }
+
 .hours {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
+}
+
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 2rem 2rem;
+}
+
+.input-fields input {
+    padding: 0.5rem;
+    border: none;
+    border: 1px solid #e7eaec;
+    border-radius: 0.325rem;
+    color: var(--wine-red);
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.input-fields button {
+    font-weight: 700;
+    padding: 0.7rem;
+    border: none;
+    background-color: var(--wine-red);
+    color: var(--snow);
+    border-radius: 0.325rem;
+    cursor: pointer;
+    box-shadow: 0px 3px rgb(69, 18, 33);
+    transition: all 0.05s;
+    transition-delay: 0.1s;
+}
+
+.input-fields button:hover {
+    filter: brightness(1.125);
+}
+
+.input-fields button:active {
+    box-shadow: 0px 0px rgb(69, 18, 33);
+    transform: scale(0.995);
 }
