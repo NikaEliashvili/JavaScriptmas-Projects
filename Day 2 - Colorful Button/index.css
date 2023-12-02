@@ -1,0 +1,65 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background: var(--body-bg);
+}
+
+:root {
+    --font-family: 'Karla', sans-serif;
+    --body-bg: #1E1F25;
+    --btn-bg: #000;
+    --btn-color: #cbcbcb;
+    --btn-color-hover: #fff;
+    --grad-color1: #eeaf61;
+    --grad-color2: #fb9062;
+    --grad-color3: #ee5d6c;
+    --grad-color4: #ce4993;
+    --grad-color5: #6a0d83;
+}
+
+.container {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-border {
+    background: linear-gradient(115deg, var(--grad-color1), var(--grad-color2), var(--grad-color3), var(--grad-color4));
+    padding: 0.125rem;
+    border-radius: 0.25rem;
+}
+
+.button-border:hover {
+    background: linear-gradient(295deg, var(--grad-color1), var(--grad-color2), var(--grad-color3), var(--grad-color4));
+    padding: 0.2rem;
+    transform: scale(1.01);
+    transition: all 0.05s;
+}
+
+.button-border:hover .button {
+    color: var(--btn-color-hover);
+    padding: 1.1rem 2.125rem;
+    transition: all 0.05s;
+}
+
+
+.button {
+    background: var(--btn-bg);
+    border: none;
+    color: var(--btn-color);
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: none;
+}
