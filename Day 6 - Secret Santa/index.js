@@ -1,19 +1,15 @@
-const button = document.getElementById("button");
-const object = document.getElementById("object");
-const santa = document.getElementById("santa");
-const people = ["Alice", "Bob", "Carly", "Dan", "Ed", "Ferdinand", "Ginny"];
+const people = ["Alice", "Bob", "Carly", "Dan", "Ed", "Ferdinand", "Ginny"]
+
+
 
 function generateSecretSantaPairs(arr) {
-  // Copy the array to avoid modifying the original array
+   // Copy the array to avoid modifying the original array
   const shuffledPeople = [...people];
 
   // Shuffle an array randomly
   for (let i = shuffledPeople.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [shuffledPeople[i], shuffledPeople[j]] = [
-      shuffledPeople[j],
-      shuffledPeople[i],
-    ];
+    [shuffledPeople[i], shuffledPeople[j]] = [shuffledPeople[j], shuffledPeople[i]];
   }
 
   // Create pairs
@@ -21,14 +17,13 @@ function generateSecretSantaPairs(arr) {
   for (let i = 0; i < shuffledPeople.length; i++) {
     const currentPerson = shuffledPeople[i];
     const nextPerson = shuffledPeople[(i + 1) % shuffledPeople.length];
-    pairs[currentPerson] =
-      currentPerson === nextPerson
-        ? shuffledPeople[(i + 2) % shuffledPeople.length]
-        : nextPerson;
+    pairs[currentPerson] = currentPerson === nextPerson ? shuffledPeople[(i + 2) % shuffledPeople.length] : nextPerson;
   }
 
-  return pairs;
+    return pairs
 }
+
+console.log(generateSecretSantaPairs(people))
 
 /**
 Example output:
