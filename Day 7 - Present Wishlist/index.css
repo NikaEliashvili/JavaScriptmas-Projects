@@ -171,7 +171,8 @@ body {
 }
 
 .new-wish input::placeholder {
-    color: whitesmoke;
+    color: rgb(74, 73, 73);
+    font-weight: 500;
     font-style: italic;
     font-family: 'Montserrat';
 }
@@ -206,16 +207,22 @@ body {
 
 
 .wish-anim {
-    animation: popup 1s ease-out 1;
+    position: relative;
+    animation: slide-in 0.8s ease-in 1;
 }
 
-@keyframes popup {
-    from {
-        opacity: 0.2;
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
         transform: translateX(100%);
     }
 
-    to {
+    75% {
+        opacity: 0.2;
+    }
+
+    100% {
         opacity: 1;
         transform: translateX(0);
     }

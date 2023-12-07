@@ -44,7 +44,7 @@ function addNewWish() {
     newWishBefore.style.display = "none";
     renderWishes();
   } else {
-    addWishBtn.textContent = "No Wish To Add...";
+    addWishBtn.textContent = "Add New Wish...";
     addWishBtn.classList.add("btn-error");
 
     setTimeout(() => {
