@@ -27,7 +27,13 @@ closeBtn.addEventListener("click", () => {
 addBtn.addEventListener("click", () => {
   newWishBefore.style.display = "flex";
 });
-addWishBtn.addEventListener("click", () => {
+addWishBtn.addEventListener("click", addNewWish);
+
+newWishInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") addNewWish();
+});
+
+function addNewWish() {
   const newItem = newWishInput.value;
   if (newItem.length > 0) {
     wishlist.push(newItem);
@@ -46,7 +52,7 @@ addWishBtn.addEventListener("click", () => {
       addWishBtn.classList.remove("btn-error");
     }, 2000);
   }
-});
+}
 
 function deleteWish(deleteWishID) {
   isAdded = false;
