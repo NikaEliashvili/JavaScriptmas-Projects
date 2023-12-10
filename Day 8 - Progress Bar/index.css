@@ -1,0 +1,71 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+:root {
+    --progressbar-bg: lightgrey;
+    --start: red;
+    --middle: blue;
+    --finish: green;
+}
+
+.container {
+    background: whitesmoke;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 60%;
+    height: 35px;
+    background: var(--progressbar-bg);
+    border-radius: 3rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden
+}
+
+.progress-bar .progress-status {
+    width: 0%;
+    height: 100%;
+    background: var(--start);
+    animation: progress 5s 0.5s linear infinite;
+}
+
+@keyframes progress {
+    0% {
+        width: 10%;
+        background: var(--start);
+
+    }
+
+    50% {
+        width: 50%;
+        background: var(--middle);
+    }
+
+    100% {
+        width: 100%;
+        background: var(--finish)
+    }
+
+    75% {
+        width: 100%;
+        background: var(--finish)
+    }
+
+}
+
+
+@media(max-width: 500px) {
+    .progress-bar {
+        width: 80%;
+    }
+}
