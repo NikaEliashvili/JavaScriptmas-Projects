@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+:root {
+    --wine-red: #C7375F;
+    --bright-red: #D42D2F;
+    --dark-green: #56924d;
+    --light-green: #77A047;
+    --gold: #FAC57D;
+    --snow: #F0F4F7;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    color: var(--snow);
+    background-color: var(--wine-red);
+}
+
+.dinner-picker {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.recipe {
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--wine-red);
+    filter: brightness(1.25);
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.03);
+}
+
+.recipe h1 {
+    margin: 0;
+}
+
+.recipe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+.img-container {
+    margin-top: 1rem;
+    background-color: #56924d;
+    width: 250px;
+    height: 150px;
+    border-radius: 0.3rem;
+    border: 4px solid var(--gold);
+
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.list-container {
+    margin-right: auto;
+    text-align: left;
+    color: #F0F4F7;
+    font-size: 1.125rem;
+}
+
+.recipe-container div li {
+    color: rgb(0, 0, 0);
+}
+
+.recipe-container div li span {
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--snow);
+}
+
+
+h1 {
+    margin: 0;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+form input,
+form button,
+.result {
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-radius: 5px;
+    border: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 12em;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+
+form * {
+    padding: .5em;
+    font-size: 1.125rem;
+    font-family: inherit;
+}
+
+label {
+    padding: 0;
+}
+
+input {
+    background: var(--snow);
+    color: var(--dark-green);
+}
+
+.veggie {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.veggie>input {
+    margin-right: 10px;
+}
+
+.result {
+    color: var(--wine-red);
+    min-width: 350px;
+    max-width: 5ch;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: var(--snow);
+    padding: 1em;
+    font-size: 1.5rem;
+}
+
+.result span {
+    display: block;
+    color: var(--light-green);
+    font-weight: 700
+}
+
+button {
+    color: var(--dark-green);
+    background: var(--gold);
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+button:hover,
+button:active {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
+
+
+
+.loading {
+    margin-left: 1rem;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--light-green);
+    border-radius: 50%;
+    border-bottom: none;
+    border-left: none;
+    animation: spin 0.5s linear 0s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.popup {
+    animation: popup 0.5s ease-out 0s 1;
+}
+
+@keyframes popup {
+    from {
+        opacity: 0.5;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+@media (max-width: 900px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+}

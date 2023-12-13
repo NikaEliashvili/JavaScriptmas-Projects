@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="dinner-picker">
+      <h1>Christmas Dinner Picker</h1>
+      <form>
+        <label for="name">How many guests are coming?</label>
+        <input type="number" id="guests" name="guests" />
+        <div class="veggie">
+          <input
+            type="checkbox"
+            id="vegetarian-input"
+            name="vegetarian"
+            checked
+          />
+          <label for="name">Vegetarian?</label>
+        </div>
+        <button id="btn" type="button">Calculate</button>
+      </form>
+      <p class="result" id="result">
+        Your ideal Christmas dinner is:
+        <span id="food"> ...</span>
+      </p>
+    </div>
+    <div id="recipe" class="recipe popup"></div>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
